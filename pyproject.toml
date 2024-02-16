@@ -2,7 +2,7 @@
 name = "week-2"
 version = "0.1.0"
 description = ""
-authors = ["Noah Gram <noah@gramonline.nl>"]
+authors = ["Noah Gram"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
