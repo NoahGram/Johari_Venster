@@ -1,4 +1,5 @@
 import random
+import time
 
 def pigeonhole_sort(provided):
     
@@ -29,6 +30,14 @@ def pigeonhole_sort(provided):
 # Randomized test case
 initial = [random.randint(0, 20) for i in range(20)]
 
-print("\n ( Pigeonhole Sorting ) \n")
+start_time = time.time()
+sorted_array = pigeonhole_sort(initial)
+end_time = time.time()
+
+# Calculate elapsed time in milliseconds
+elapsed_time_ms = (end_time - start_time) * 1000
+
+print("\n( Pigeonhole Sorting )\n")
 print("Initial array:", initial)
-print("Sorted array:", pigeonhole_sort(initial), "\n")
+print("Sorted array:", sorted_array)
+print("\nTime taken for sorting:", elapsed_time_ms, "seconds")
