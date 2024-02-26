@@ -29,6 +29,6 @@ def pigeonhole_sort(provided):
 # Randomized test case
 initial = [random.randint(0, 20) for i in range(20)]
 
-print("\nPigeonhole Sorting")
+print("\n ( Pigeonhole Sorting ) \n")
 print("Initial array:", initial)
 print("Sorted array:", pigeonhole_sort(initial), "\n")
