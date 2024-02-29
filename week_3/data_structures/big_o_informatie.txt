@@ -1,54 +1,51 @@
-Array Data Structure:
-
-Big O Analysis:
-
-Time Complexity: The time complexity of the Dutch National Flag algorithm is O(n), where 'n' is the number of elements in the array. This is because we traverse the array only once.
-Space Complexity: The space complexity is O(1) because we use only a constant amount of extra space for storing the pointers.
-In summary, the Dutch National Flag algorithm efficiently sorts an array with three distinct elements (0s, 1s, and 2s) in linear time, making it a highly efficient sorting algorithm for such scenarios.
-
-
-Stack Data Structure:
-
-
-
-List Data Structure:
-
-Onderbouwing van Big O-complexiteit:
-Tijdscomplexiteit: Het algoritme verdeelt de array in elke stap in twee helften, wat resulteert in logaritmische verdelingstijd (O(log n)). 
-Vervolgens moet elke helft worden samengevoegd, wat lineaire tijd kost (O(n)). Aangezien beide stappen onafhankelijk van elkaar worden uitgevoerd, behoudt Merge Sort een tijdscomplexiteit van O(n log n).
-
-Ruimtecomplexiteit: Het algoritme vereist extra ruimte voor het samenvoegen van de helften. Dit extra geheugen heeft een omvang van O(n) vanwege het behoud van de gesplitste helften en het samenvoegen ervan.
-
-Dit onderbouwt de big O-complexiteit van Merge Sort als O(n log n).
+1.	Array (Dutch National Flag) (Adedimeji, 2023)
+Het “Dutch National Flag” algoritme is bedacht door Edsger Dijkstra met als doel het sorteren van elementen waarbij 
+de elementen slechts een beperkt aantal unieke waarden hebben, zoals een lijst die alleen de waardes 1, 2, of 3 kan 
+bevatten. Het doel, in dit voorbeeld, is om de array te sorteren zodat alle elementen met de waarde 1 aan het begin 
+staan, gevolgd door alle elementen met 2, en tot slot de elementen met 3.
+'
+De connectie tussen deze algoritme en Big O is vrij eenvoudig. Het algoritme loop alleen 1 keer door de array heen 
+en voor elk element in de array alleen een beperkte aantal operaties uitvoert op de elementen door de denkwijze van 
+deze algoritme. Dit levert een lineaire O(n) tijdcomplexiteit op wat het algoritme efficiënt maakt, zelfs voor 
+gigantische lijsten.
 
 
-Het Merge Sort-algoritme gebruikt typisch arrays (lijsten in Python) om verschillende redenen, waaronder geheugenefficiëntie, eenvoudige implementatie en prestatiekenmerken.
+2.	Stack (Balanced Parentheses) (GeeksforGeeks, 2023)
+ Het “Balanced Parentheses” algoritme probeert een computerwetenschappelijk probleem op te lossen. Het controleert 
+of haakjes, zoals (), [], {} etc., in een correcte wiskundige expressie/code zijn uitgebalanceerd/genest. 
+Gebalanceerd in dit context is of de openingshaak met het correct sluitingshaakje wordt afgesloten. In het 
+geval van Stacks moeten het sluitingshaakje vlak na het openingshaakje zijn.
 
-Geheugenefficiëntie:
+In dit algoritme is de Big-O iets uitgebreider vergeleken met de vorige algoritme, maar nog steeds vrij eenvoudig. 
+Het algoritme moet tenminste 1 keer door de Stack heenlopen om te zien of er wijzigingen nodig zijn. Wanneer dit 
+het geval is gebeurd er een Deletion of Insertion operatie. Voor het inlezen is de tijdcomplexiteit lineair O(n), 
+en voor het invoegen en verwijderen O(1). In theorie zou de algoritme dus erg efficiënt zijn omdat het lineair, 
+of zelfs beter dan lineair is, maar in realiteit, door de nature van een Stack, is het vrij inefficiënt.
 
-Arrays bieden aaneengesloten geheugenallocatie, waardoor efficiënte toegang tot elementen mogelijk is via indexering.
-Merge Sort betrekt vaak het opsplitsen van de array recursief. Arrays vergemakkelijken deze splitsingsoperatie door het geheugen in gelijke delen te verdelen, waardoor het beheer ervan eenvoudiger wordt.
-Eenvoudige implementatie:
 
-Arrays in Python zijn veelzijdig en eenvoudig te gebruiken, vooral voor bewerkingen zoals elementtoegang, slicen en samenvoegen.
-Het Merge Sort-algoritme past natuurlijk goed bij arrays omdat het inhoudt dat de array recursief in helften wordt verdeeld en weer wordt samengevoegd.
-Prestatiekenmerken:
+3.	List (Merge Sort) (GeeksforGeeks, 2023)
+Het “Merge Sort” algoritme is een sorteeralgoritme die een lijst opsplitst in meerdere sub-lijsten. Deze 
+sub-lijsten bestaan uit een element vanuit de originele lijst, plus het eerstvolgende element. Hierin worden de 
+twee elementen vergeleken, en vervolgens verwisseld als de tweede element kleiner is dan het eerste element. 
+Nadat dit bij alle sub-lijsten gebeurd is, zal de algoritme een sub-lijst vergelijken met de eerstvolgende sub-lijst. 
+Hier alweer vergelijkt het en verwisselt het wanneer van toepassing. Zodra dit klaar is worden de sub-lijsten 
+samengevoegd, totdat alle sub-lijsten samengevoegd zijn tot 1 gehele gesorteerde lijst.
 
-De merge-operatie in Merge Sort vereist efficiënt samenvoegen van twee gesorteerde sub-arrays. Arrays bieden een tijdscomplexiteit van O(1) voor toegang tot elementen per index, waardoor het samenvoegen relatief efficiënt is.
-Hoewel andere gegevensstructuren zoals gekoppelde lijsten ook kunnen worden gebruikt, bieden ze mogelijk geen efficiënte willekeurige toegang, wat de prestaties van de merge-operatie kan beïnvloeden.
-Arrays hebben voorspelbare geheugentoegangspatronen, wat kan leiden tot betere cache-prestaties, vooral in talen zoals C of C++.
+Dit is de meest complexe algoritme van de 3 in de context van Big O. Dit komt namelijk doordat de tijdcomplexiteit 
+in twee gedeeltes opgesplitst kan worden.
 
-Nu analyseren we de tijdscomplexiteit (Big O) van het Merge Sort-algoritme bij gebruik van arrays:
+    1.	Het algoritme splitst de lijst constant in tweeën totdat het een sub-lijsten zijn met een enkel element. 
+    Hierdoor is de tijdcomplexiteit logaritmisch O(log n) met “n” die de lengte van de originele lijst aanduidt.
+    2.	Vervolgens worden de sub-lijsten telkens samengevoegd en gesorteerd tot dubbel zijn grootte totdat er 
+    één sub-lijst is die de grootte van de originele lijst bereikt. Dit zijn gewone operaties van een lijst 
+    waardoor de tijdcomplexiteit O(n) aanduidt.
 
-Tijdscomplexiteit: De tijdscomplexiteit van Merge Sort is O(n log n), waarbij 'n' het aantal elementen in de array is.
+Wanneer deze twee gedeeltes gecombineerd worden, kan de tijdcomplexiteit voor de gehele algoritme aangeduid 
+worden als O(n log n).
 
-De verdeelstap verdeelt de array recursief in helften, wat O(log n) tijd kost.
-De veroverstap houdt in dat twee gesorteerde sub-arrays worden samengevoegd, wat in het slechtste geval O(n) tijd kost.
-Aangezien de verdeel- en veroverstappen herhaaldelijk recursief worden uitgevoerd, is de algehele tijdscomplexiteit O(n log n).
-Complexiteit in het slechtste geval:
 
-De tijdscomplexiteit in het slechtste geval van Merge Sort is O(n log n), ongeacht de invoergegevens.
-Dit maakt Merge Sort efficiënt voor grote datasets en geschikt voor toepassingen waarbij prestaties in het slechtste geval cruciaal zijn.
-Ruimtecomplexiteit: De ruimtecomplexiteit van Merge Sort is O(n) vanwege de extra ruimte die nodig is voor het samenvoegen van twee gesorteerde sub-arrays.
+Geciteerde werken
+    Adedimeji, I. L. (2023, Juni). Introduction to Arrays and Their Algorithms. Opgehaald van Medium: https://medium.com/@ibrahimlanre1890/introduction-to-arrays-and-their-algorithms-f6d88c86d14
+    GeeksforGeeks. (2023, Mei). Check for Balanced Brackets in an expression (well-formedness). Opgehaald van GeeksforGeeks: https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/
+    GeeksforGeeks. (2023, November). Merge Sort – Data Structure and Algorithms Tutorials. Opgehaald van GeeksforGeeks: https://www.geeksforgeeks.org/merge-sort/
 
-Samenvattend biedt het gebruik van arrays met het Merge Sort-algoritme efficiënt gebruik van geheugen, eenvoudige implementatie en voorspelbare prestatiekenmerken, waardoor het een populaire keuze is voor het efficiënt sorteren van grote datasets. De tijdscomplexiteit van O(n log n) zorgt voor goede prestaties in verschillende invoerscenario's, waardoor Merge Sort een betrouwbaar sorteeralgoritme is.
