@@ -1,5 +1,18 @@
 Array Data Structure:
 
+Big O Analysis:
+
+Time Complexity: The time complexity of the Dutch National Flag algorithm is O(n), where 'n' is the number of elements in the array. This is because we traverse the array only once.
+Space Complexity: The space complexity is O(1) because we use only a constant amount of extra space for storing the pointers.
+In summary, the Dutch National Flag algorithm efficiently sorts an array with three distinct elements (0s, 1s, and 2s) in linear time, making it a highly efficient sorting algorithm for such scenarios.
+
+
+Stack Data Structure:
+
+
+
+List Data Structure:
+
 Onderbouwing van Big O-complexiteit:
 Tijdscomplexiteit: Het algoritme verdeelt de array in elke stap in twee helften, wat resulteert in logaritmische verdelingstijd (O(log n)). 
 Vervolgens moet elke helft worden samengevoegd, wat lineaire tijd kost (O(n)). Aangezien beide stappen onafhankelijk van elkaar worden uitgevoerd, behoudt Merge Sort een tijdscomplexiteit van O(n log n).
@@ -39,10 +52,3 @@ Dit maakt Merge Sort efficiënt voor grote datasets en geschikt voor toepassinge
 Ruimtecomplexiteit: De ruimtecomplexiteit van Merge Sort is O(n) vanwege de extra ruimte die nodig is voor het samenvoegen van twee gesorteerde sub-arrays.
 
 Samenvattend biedt het gebruik van arrays met het Merge Sort-algoritme efficiënt gebruik van geheugen, eenvoudige implementatie en voorspelbare prestatiekenmerken, waardoor het een populaire keuze is voor het efficiënt sorteren van grote datasets. De tijdscomplexiteit van O(n log n) zorgt voor goede prestaties in verschillende invoerscenario's, waardoor Merge Sort een betrouwbaar sorteeralgoritme is.
-
-
-Stack Data Structure:
-
-
-
-List Data Structure:

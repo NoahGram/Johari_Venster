@@ -1,51 +1,44 @@
-import random
-import time
 import numpy as np
+import time
 
-def merge_sort(arr):
-    #If the array has 1 or 0 elements, it is already sorted
-    if len(arr) <= 1:  
-        return arr
+def dutch_national_flag(arr):
+    # Initialize pointers for the three sections
+    low = 0  # Pointer for 0s (Lowest value)
+    mid = 0  # Pointer for 1s (middle value)
+    high = len(arr) - 1  # Pointer for 2s (Higest value)
 
-    # Split the array in half and sort each half
-    mid = len(arr) // 2  
-    left_half = merge_sort(arr[:mid])  
-    right_half = merge_sort(arr[mid:])  
+    # Traverse the array and split it into three sections
+    while mid <= high:
+        if arr[mid] == 0:
+            # If the current element is 0, swap it with the element at the low index
+            arr[low], arr[mid] = arr[mid], arr[low]
+            # Move low and mid pointers to the right
+            low += 1
+            mid += 1
+        elif arr[mid] == 1:
+            # If the current element is 1, move mid pointer to the right
+            mid += 1
+        else:  # arr[mid] == 2
+            # If the current element is 2, swap it with the element at the high index
+            arr[mid], arr[high] = arr[high], arr[mid]
+            # Move high pointer to the left
+            high -= 1
+    
+    return arr
 
-    sorted_arr = []
-    i = j = 0
+# Example usage
+if __name__ == "__main__":
+    arr = (np.random.rand(10) * 3).astype(int)
+    print("Original array:", arr)
 
-    # Merge the sorted halves
-    while i < len(left_half) and j < len(right_half):
-        # Compare the first elements of the two halves
-        if left_half[i] < right_half[j]:
-            sorted_arr.append(left_half[i])
-            i += 1
-        # If the right half element is smaller, append it to the sorted array
-        else:
-            sorted_arr.append(right_half[j])
-            j += 1
+    # Measure execution time
+    start_time = time.perf_counter()
 
-    # Append the remaining elements of the left and right halves
-    sorted_arr.extend(left_half[i:])
-    sorted_arr.extend(right_half[j:])
+    sorted_arr = dutch_national_flag(arr)
+    print("Array after sorting using Dutch National Flag algorithm:", sorted_arr)
 
-    return sorted_arr
+    end_time = time.perf_counter()
 
-random_array = (np.random.randint(0, 100, 100))
-
-print("\n ( Array Data Structure ) \n\nRandom array before sorting:", random_array)
-
-# Measure execution time
-start_time = time.perf_counter()
-
-# Sort the random array using merge sort
-sorted_array = merge_sort(random_array)
-
-end_time = time.perf_counter()
-
-# Calculate execution time
-execution_time_ms = (end_time - start_time) * 1000
-
-print("Sorted array:", sorted_array)
-print("Merge sort execution time:", execution_time_ms, "ms")
+    # Calculate execution time
+    execution_time_ms = (end_time - start_time) * 1000
+    print("Merge sort execution time:", execution_time_ms, "ms")
