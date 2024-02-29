@@ -26,7 +26,7 @@ def dutch_national_flag(arr):
     
     return arr
 
-# Example usage
+
 if __name__ == "__main__":
     arr = (np.random.rand(10) * 3).astype(int)
     print("Original array:", arr)
