@@ -1,0 +1,48 @@
+Array Data Structure:
+
+Onderbouwing van Big O-complexiteit:
+Tijdscomplexiteit: Het algoritme verdeelt de array in elke stap in twee helften, wat resulteert in logaritmische verdelingstijd (O(log n)). 
+Vervolgens moet elke helft worden samengevoegd, wat lineaire tijd kost (O(n)). Aangezien beide stappen onafhankelijk van elkaar worden uitgevoerd, behoudt Merge Sort een tijdscomplexiteit van O(n log n).
+
+Ruimtecomplexiteit: Het algoritme vereist extra ruimte voor het samenvoegen van de helften. Dit extra geheugen heeft een omvang van O(n) vanwege het behoud van de gesplitste helften en het samenvoegen ervan.
+
+Dit onderbouwt de big O-complexiteit van Merge Sort als O(n log n).
+
+
+Het Merge Sort-algoritme gebruikt typisch arrays (lijsten in Python) om verschillende redenen, waaronder geheugenefficiëntie, eenvoudige implementatie en prestatiekenmerken.
+
+Geheugenefficiëntie:
+
+Arrays bieden aaneengesloten geheugenallocatie, waardoor efficiënte toegang tot elementen mogelijk is via indexering.
+Merge Sort betrekt vaak het opsplitsen van de array recursief. Arrays vergemakkelijken deze splitsingsoperatie door het geheugen in gelijke delen te verdelen, waardoor het beheer ervan eenvoudiger wordt.
+Eenvoudige implementatie:
+
+Arrays in Python zijn veelzijdig en eenvoudig te gebruiken, vooral voor bewerkingen zoals elementtoegang, slicen en samenvoegen.
+Het Merge Sort-algoritme past natuurlijk goed bij arrays omdat het inhoudt dat de array recursief in helften wordt verdeeld en weer wordt samengevoegd.
+Prestatiekenmerken:
+
+De merge-operatie in Merge Sort vereist efficiënt samenvoegen van twee gesorteerde sub-arrays. Arrays bieden een tijdscomplexiteit van O(1) voor toegang tot elementen per index, waardoor het samenvoegen relatief efficiënt is.
+Hoewel andere gegevensstructuren zoals gekoppelde lijsten ook kunnen worden gebruikt, bieden ze mogelijk geen efficiënte willekeurige toegang, wat de prestaties van de merge-operatie kan beïnvloeden.
+Arrays hebben voorspelbare geheugentoegangspatronen, wat kan leiden tot betere cache-prestaties, vooral in talen zoals C of C++.
+
+Nu analyseren we de tijdscomplexiteit (Big O) van het Merge Sort-algoritme bij gebruik van arrays:
+
+Tijdscomplexiteit: De tijdscomplexiteit van Merge Sort is O(n log n), waarbij 'n' het aantal elementen in de array is.
+
+De verdeelstap verdeelt de array recursief in helften, wat O(log n) tijd kost.
+De veroverstap houdt in dat twee gesorteerde sub-arrays worden samengevoegd, wat in het slechtste geval O(n) tijd kost.
+Aangezien de verdeel- en veroverstappen herhaaldelijk recursief worden uitgevoerd, is de algehele tijdscomplexiteit O(n log n).
+Complexiteit in het slechtste geval:
+
+De tijdscomplexiteit in het slechtste geval van Merge Sort is O(n log n), ongeacht de invoergegevens.
+Dit maakt Merge Sort efficiënt voor grote datasets en geschikt voor toepassingen waarbij prestaties in het slechtste geval cruciaal zijn.
+Ruimtecomplexiteit: De ruimtecomplexiteit van Merge Sort is O(n) vanwege de extra ruimte die nodig is voor het samenvoegen van twee gesorteerde sub-arrays.
+
+Samenvattend biedt het gebruik van arrays met het Merge Sort-algoritme efficiënt gebruik van geheugen, eenvoudige implementatie en voorspelbare prestatiekenmerken, waardoor het een populaire keuze is voor het efficiënt sorteren van grote datasets. De tijdscomplexiteit van O(n log n) zorgt voor goede prestaties in verschillende invoerscenario's, waardoor Merge Sort een betrouwbaar sorteeralgoritme is.
+
+
+Stack Data Structure:
+
+
+
+List Data Structure:
