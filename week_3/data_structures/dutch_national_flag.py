@@ -7,7 +7,8 @@ from stack import Stack
 
 def dutch_national_flag(data):
     # Initialize pointers for the three sections
-    low = mid = 0
+    low = 0
+    mid = 0
     high = len(data) - 1
 
     # Traverse the array and split it into three sections
@@ -32,7 +33,7 @@ def dutch_national_flag(data):
 if __name__ == "__main__":
     # Test with a NumPy array
     arr = [2, 0, 1, 2, 0, 1, 1, 0, 2, 2]
-    print("Original array (Python List):", arr)
+    print("\nOriginal array (Python List):", arr)
 
     # Measure execution time
     start_time = time.perf_counter()
