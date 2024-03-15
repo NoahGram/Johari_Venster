@@ -3,6 +3,7 @@ import pyodbc
 import sqlite3
 import numpy as np
 import datetime
+from settings import settings, logger
 
 # Connectie maken met de SSMS database
 DB = {'servername': 'LAPTOP-NIPS1D14\SQLEXPRESS',
