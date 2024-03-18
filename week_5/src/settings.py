@@ -1,5 +1,7 @@
 from pathlib import Path
-from logoru import logger
+import pyodbc
+import sqlite3
+from loguru import logger
 
 class Settings():
     basedir = Path.cwd()
@@ -7,5 +9,9 @@ class Settings():
     processeddir = Path("processed_data")
     logdir = basedir / "log"
 
+    # Connectie maken met de SSMS database
+    DB = {'servername': 'LAPTOP-NIPS1D14\SQLEXPRESS',
+        'database': 'johari'}
+
 settings = Settings()
-logger.add("logfile.log")
+logger.add("../logfile.log")

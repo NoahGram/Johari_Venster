@@ -1,7 +1,7 @@
-import processing
+import script
 
 def main() -> None:
-    processing.process()
+    script.process()
 
 if __name__ == "__main__":
     main()
