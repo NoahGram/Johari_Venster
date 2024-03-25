@@ -10,7 +10,7 @@ class Settings():
     logdir = basedir / "log"
 
     # Connectie maken met de SSMS database
-    DB = {'servername': 'DESKTOP-IT4OHPV\SQLEXPRESS\SQLEXPRESS',
+    DB = {'servername': 'MSI\SQLEXPRESS',
         'database': 'johari'}
 
 settings = Settings()
