@@ -3,3 +3,4 @@
 week_5/logfile.log
 data/processed/dwh.sqlite
 data/processed/dwh.sqlite
+src/backup.ipynb
